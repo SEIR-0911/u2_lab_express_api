@@ -6,8 +6,8 @@ const reviewSchema = new Schema(
         score: { 
             type: Number, 
             required: true,
-            min: [0, `Cannot be less than 0`],
-            max: [100, `Cannot be greater than 100`],
+            min: [0, `Must be a whole number between 0 and 100`],
+            max: [100, `Must be a whole number between 0 and 100`],
             validate: {
                 validator: function(v) {
                     return Number.isInteger(v) == true
