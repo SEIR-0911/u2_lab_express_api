@@ -3,9 +3,18 @@ const  { Schema } = require('mongoose')
 
 const reviewSchema = new Schema(
     {
-        score: { type: String, required: true },
+        score: { 
+            type: Number, 
+            required: true,
+            min: 1,
+            max: 5,
+            validate: {
+                validator: function(val) {
+                    return Number.isInteger(val) == true
+                },
+            }
+        },
         comment: { type: String, required: true },
-        //movie: {type: Schema.Types.ObjectId, ref: 'Movie'}
     },
     { timestamps: true }
 )
