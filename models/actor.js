@@ -8,8 +8,8 @@ const actorSchema = new Schema(
         name:  {type: String, required: true},
         age: {type: Number, required: true},
         alive: {type: Boolean, required: true},
-        //image: {type: Buffer?, required: true},
-        movie: [{type: Schema.Types.ObjectId, ref: 'Movie'}]
+        movie: [{type: Schema.Types.ObjectId, ref: 'Movie'}],
+        image: {type: String},
     },
     {
         timestamps: true

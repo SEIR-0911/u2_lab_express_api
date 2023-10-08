@@ -6,12 +6,12 @@ const {Schema} = require('mongoose')
 const movieSchema = new Schema(
     {
         title:  {type: String, required: true},
-        runtime: {type: Number, required: true},
+        runtimeMins: {type: Number, required: true},
         rating: {type: String, required: true},
         releaseYear: {type: Number, required: true},
         desc: {type: String, required: true},
-        actors: [{type: Schema.Types.ObjectId, ref: 'Actor'}]
-        //image: {type: Buffer?, required: true}
+        actors: [],
+        image: {type: String}
     },
     {
         timestamps: true
