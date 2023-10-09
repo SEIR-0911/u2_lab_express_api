@@ -311,9 +311,6 @@ const run = async () => {
     // await addMovies()
     await findAllMovies()
 
-    // console.log((await Actor.findOne({name:"Tim Robbins"}))._id)
-    // console.log(await getActorId("Tim Robbins"))
-
     // await addReviews()
     // await findAllReviews()
     // await deleteAll()
