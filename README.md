@@ -6,22 +6,48 @@
 
 For this lab we are going to create our own backend server! 
 
-1) Run your necessary installations to get the necessary files and folders for Mongoose and Express, then mkdir and touch the additional ones you will need. Feel free to look back at previous lessons to see what these will entail. You are _not_ expected to memorize every step of the process so far!
+1) Necessary installations
 
 ```sh
 npm init -y
-npm i ... ... ... ...
-mkdir ... ... ... ...
-touch ... ... ... ...
+npm i cors express mongoose morgan
+mkdir db models seed ...
+touch db/index.js
+touch models/actor.js models/movie.js ... ...
+touch server.js
 ```
+db/index.js ==> store db connection
+```js
+const mongoose = require('mongoose');
+
+mongoose
+    .connect('mongodb://127.0.0.1:27017/moviesDatabase')
+    .then(() => {
+        console.log('Successfully connected to MongoDB.');
+    })
+    .catch(e => {
+        console.error('Connection error', e.message);
+    });
+
+const db = mongoose.connection;
+
+module.exports = db;
+```
+models ==> we store the Schema
 
 _note:_ you may have to run npm i, mkdir, and touch multiple times through these steps to ensure you have everything created in the correct order
 
-2) Update your Scripts block in your package.json so that your server is able to run on Nodemon (which, hopefully you've installed. If not, do it now!)
+2) Update your Scripts block in your package.json
+```
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+```
 
-3) In your config/db file, connect to a moviesDatabase using our standard Mongoose boilerplate
+4) In your config/db file, connect to a moviesDatabase using our standard Mongoose boilerplate
 
-4) Create 3 schemas, Movies, Reviews and Actors. 
+5) Create 3 schemas, Movies, Reviews and Actors. 
 
 -  Your movies model should have a Title, Runtime, Rating, Year Released and a brief description. You can also include a link to a poster image for it, or try to upload an image file if you want a challenge! Think of what data types you'll want to use for each of these additional properties
 
