@@ -1,5 +1,5 @@
 const express = require('express')
-const db = require('./db/index')
+const db = require('./db')
 
 const logger = require('morgan')
 const bodyParser = require('body-parser')
@@ -15,17 +15,13 @@ const app = express()
 app.use(logger('dev'))
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
-    res.send('Root Setup')
-})
-
-app.get('/', (req, res) => res.send ('Here is where we begin our journey into MARS (Movies, Actors, Reviews System'))
+app.get('/', (req, res) => res.send('Here is where we begin our journey into MARS (Movies, Actors, Reviews System'))
 
 app.get('/actors', actorController.getActors)
 app.get('/actors/:id', actorController.getActor)
 
 app.get('/movies', movieController.getMovies)
-app.get('/movies:id', movieController.getMovie)
+app.get('/movies/:id', movieController.getMovie)
 
 app.get('/reviews', reviewController.getReviews)
 app.get('/reviews/:id', reviewController.getReview)

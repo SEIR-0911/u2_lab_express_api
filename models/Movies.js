@@ -3,6 +3,7 @@ const { Schema } = require('mongoose')
 
 const moviesSchema = new Schema(
     {
+        id: { type: Number, required: true },
         title: { type: String, required: true },
         runtime: { type: Number, required: true},
         rating: { type: Number, required: true},

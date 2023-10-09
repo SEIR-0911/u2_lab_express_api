@@ -1,11 +1,11 @@
 const { Actor } = require('../models')
 
-module.export = {
-    getAllActors,
+module.exports = {
+    getActors,
     getActor
 }
 
-async function getAllActors(req, res) {
+async function getActors(req, res) {
     try {
         const actors = await Actor.find()
         res.json(actors)

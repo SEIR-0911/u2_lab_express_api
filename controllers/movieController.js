@@ -1,11 +1,11 @@
 const { Movie } = require('../models')
 
 module.exports = {
-    getAllMovies,
+    getMovies,
     getMovie
 }
 
-async function getAllMovies (req, res){
+async function getMovies (req, res){
     try {
         const movies = await Movie.find()
         res.json(movies)

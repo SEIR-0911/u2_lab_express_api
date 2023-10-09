@@ -1,11 +1,11 @@
 const { Review } = require('../models')
 
 module.exports = {
-    getAllReviews,
+    getReviews,
     getReview
 }
 
-async function getAllReviews (req, res){
+async function getReviews (req, res){
     try {
         const reviews = await Review.find()
         res.json(reviews)
