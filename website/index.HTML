@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   
+    <title>Tiny Movie DB</title>
+</head>
+
+<body>
+    <div>
+        <div id="title">
+            <h1>Just Another Tiny Movie Database</h1>
+            <p>Welcome to the Tiny Movie Database! Right now it's miniscule, with only five movies, a handful of
+                reviews,
+                and a couple actors from each movie - but feel free play a guessing game to figure out what we do have!
+                (Note: "actor" is used here to encompass performers of all genders.)</p>
+            <p>Want to see everything in the databse instead? Use the "Get All" buttons!</p>
+        </div>
+        <div id="searchParams">
+            <div id="searchMovies">
+                <input type="text" id="movieInput" placeholder="Movie title">
+                <button id="movieBtn">Search Movies</button>
+            </div>
+            <div id="searchActors">
+                <input type="text" id="actorInput" placeholder="Actor Name">
+                <button id="actorBtn">Search Actors</button>
+            </div>
+        </div>
+    </div>
+    <div id="getAll">
+        <button id="allMovies">Get All Movies</button>
+        <button id="allReviews">Get All Reviews</button>
+        <button id = "allActors">Get All Actors</button>
+    </div>
+    <!-- <footer>Movie slate image courtesy of Oscar Cortez and the Noun Project</footer> -->
+    <script src="index.js"></script>
+</body>
+
+</html>
