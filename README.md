@@ -11,7 +11,6 @@ For this lab we are going to create our own backend server!
 ```sh
 npm init -y
 npm i cors express mongoose morgan
-mkdir db models seed
 touch server.js
 ```
 
@@ -25,6 +24,7 @@ touch server.js
 
 4) In your config/db file, connect to a moviesDatabase using our standard Mongoose boilerplate
 ```sh
+mkdir db
 touch db/index.js
 ```
 db/index.js ==> store db connection
@@ -46,18 +46,52 @@ module.exports = db;
 ```
 
 6) Create 3 schemas, Movies, Reviews and Actors.
-
 ```
-touch models/actor.js models/movie.js models/reviews.js
-
+mkdir models seed
+touch models/actor.js models/movie.js models/review.js
+touch seed/actors.js seed/movies.js seed/reviews.js
 ```
 models ==> we store the Schemas
+seed ==> we seed the data in the db
 
-8) 
+7) Requriments for data:
 
 -  Your movies model should have a Title, Runtime, Rating, Year Released and a brief description. You can also include a link to a poster image for it, or try to upload an image file if you want a challenge! Think of what data types you'll want to use for each of these additional properties
+```js
+const { Schema } = require('mongoose');
+
+const Movie = new Schema(
+    {
+        title: { type: String, required: true },
+        runtime: { type: Number, required: true },
+        rating: { type: String, required: true },
+        released: { type: Date },
+        description: { type: String },
+        url: { type: String }
+    },
+    { timestamps: true }
+);
+
+module.exports = Movie;
+```
 
 - Your actors model should have properties for Name and Age, and one that says if they are Alive or not, plus any other properties you'll want to include. Again, try to add images using either method. What datatypes would we use for our other properties?
+
+```js
+const { Schema } = require('mongoose');
+
+const Actor = new Schema(
+    {
+        name: { type: String, required: true },
+        age: { type: Number, required: true },
+        stillAlive: { type: Boolean, required: true },
+        url: { type: String }
+    },
+    { timestamps: true }
+);
+
+module.exports = Actor;
+```
 
 - Reviews should be owned by movies and have a score and a comment. Your score can be 1-5, 1-10, or 0-100%, either way, it will need some kind of Constraint put on it to make sure it can only hold valid information.
 
