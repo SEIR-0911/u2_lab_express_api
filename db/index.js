@@ -1,5 +1,4 @@
-// connect moviesDatabase using Mongoose boilerplate aka:
-// create a mongoose const, then mongoose.connect.then.catch, then db and exports
+// COMPLETED
 
 const mongoose = require('mongoose')
 
