@@ -16,7 +16,7 @@ const getOneActor = async (req,res) => {
         if (actor) {
             return res.json(actor)
         }
-        return res.status(404).send('Review with specified ID does not exist')
+        return res.status(404).send('Actor with specified ID does not exist')
     } catch (e) {
         return res.status(500).send(e.message)
     }

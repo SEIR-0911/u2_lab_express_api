@@ -1,5 +1,6 @@
 const express = require('express');
 const db = require('./config');
+const logger = require('morgan')
 
 const actorsController = require('./controllers/actorController')
 const moviesController = require('./controllers/movieController')
@@ -8,6 +9,7 @@ const reviewsController = require('./controllers/reviewController');
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+app.use(logger('dev'))
 
 
 app.get('/', actorsController.getAllActors)
