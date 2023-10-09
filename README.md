@@ -62,6 +62,7 @@ const { Schema } = require('mongoose');
 
 const Movie = new Schema(
     {
+        move_id: { type: Number, required: true },
         title: { type: String, required: true },
         runtime: { type: Number, required: true },
         rating: { type: String, required: true },
@@ -82,6 +83,7 @@ const { Schema } = require('mongoose');
 
 const Actor = new Schema(
     {
+        act_id: { type: Number, required: true },
         name: { type: String, required: true },
         age: { type: Number, required: true },
         stillAlive: { type: Boolean, required: true },
@@ -94,6 +96,22 @@ module.exports = Actor;
 ```
 
 - Reviews should be owned by movies and have a score and a comment. Your score can be 1-5, 1-10, or 0-100%, either way, it will need some kind of Constraint put on it to make sure it can only hold valid information.
+```js
+  const { Schema } = require('mongoose');
+
+const Review = new Schema(
+    {
+        rev_id: { type: Number, required: true },
+        email: { type: String, required: true },
+        score: { type: Number, required: true },
+        date: { type: Date, required: true },
+        description: { type: String }
+    },
+    { timestamps: true }
+);
+
+module.exports = Review;
+```
 
 - Use your Foreign Key references to connect your data! You will have the choice of which you want the parent and child to be. Should Actors own many movies? Or movies own any actors?
 
