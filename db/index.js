@@ -1,15 +1,14 @@
 const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
+mongoose
+    .connect('mongodb://127.0.0.1:27017/moviesDatabase')
+    .then(() => {
+        console.log('Successfully connected to MongoDB.');
+    })
+    .catch(e => {
+        console.error('Connection error', e.message);
+    });
 
-// Connect MongoDB at default port 27017.
-mongoose.connect('mongodb://localhost:27017/MovieDatabase', {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-}, (err) => {
-    if (!err) {
-        console.log('MongoDB Connection Succeeded.');
-    } else {
-        console.log('Error in DB connection: ' + err);
-    }
-});
+const db = mongoose.connection;
+
+module.exports = db;
