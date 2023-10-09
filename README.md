@@ -11,10 +11,21 @@ For this lab we are going to create our own backend server!
 ```sh
 npm init -y
 npm i cors express mongoose morgan
-mkdir db models seed ...
-touch db/index.js
-touch models/actor.js models/movie.js ... ...
+mkdir db models seed
 touch server.js
+```
+
+2) Update your Scripts block in your package.json
+```
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+```
+
+4) In your config/db file, connect to a moviesDatabase using our standard Mongoose boilerplate
+```sh
+touch db/index.js
 ```
 db/index.js ==> store db connection
 ```js
@@ -33,21 +44,16 @@ const db = mongoose.connection;
 
 module.exports = db;
 ```
-models ==> we store the Schema
 
-_note:_ you may have to run npm i, mkdir, and touch multiple times through these steps to ensure you have everything created in the correct order
+6) Create 3 schemas, Movies, Reviews and Actors.
 
-2) Update your Scripts block in your package.json
 ```
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
+touch models/actor.js models/movie.js models/reviews.js
+
 ```
+models ==> we store the Schemas
 
-4) In your config/db file, connect to a moviesDatabase using our standard Mongoose boilerplate
-
-5) Create 3 schemas, Movies, Reviews and Actors. 
+8) 
 
 -  Your movies model should have a Title, Runtime, Rating, Year Released and a brief description. You can also include a link to a poster image for it, or try to upload an image file if you want a challenge! Think of what data types you'll want to use for each of these additional properties
 
