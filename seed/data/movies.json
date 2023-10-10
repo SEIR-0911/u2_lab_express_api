@@ -1,1 +1,61 @@
-[{}]
+[
+  {
+    "title": "The Terminator",
+    "runtime": 107,
+    "rating": "R",
+    "actors": [],
+    "released": 1984,
+    "description": "A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation.",
+    "url": "../../assets/movie.jpg",
+    "reviews": []
+  },
+  {
+    "title": "Terminator 2: Judgment Day",
+    "runtime": 137,
+    "rating": "R",
+    "actors": [],
+    "released": 1991,
+    "description": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son John from an even more advanced and powerful cyborg.",
+    "url": "../../assets/movie.jpg",
+    "reviews": []
+  },
+  {
+    "title": "Terminator: Dark Fate",
+    "runtime": 128,
+    "rating": "R",
+    "actors": [],
+    "released": 2019,
+    "description": "An augmented human and Sarah Connor must stop an advanced liquid Terminator from hunting down a young girl, whose fate is critical to the human race.",
+    "url": "../../assets/movie.jpg",
+    "reviews": []
+  },
+  {
+    "title": "Terminator Genisys",
+    "runtime": 126,
+    "rating": "PG-13",
+    "actors": [],
+    "description": "When John Connor, leader of the human resistance, sends Sgt. Kyle Reese back to 1984 to protect Sarah Connor and safeguard the future, an unexpected turn of events creates a fractured timeline.",
+    "url": "../../assets/movie.jpg",
+    "reviews": []
+  },
+  {
+    "title": "Terminator Salvation",
+    "runtime": 115,
+    "rating": "PG-13",
+    "actors": [],
+    "released": 2009,
+    "description": "In 2018, a mysterious new weapon in the war against the machines, half-human and half-machine, comes to John Connor on the eve of a resistance attack on Skynet. But whose side is he on, and can he be trusted?",
+    "url": "../../assets/movie.jpg",
+    "reviews": []
+  },
+  {
+    "title": "Terminator Salvation",
+    "runtime": 109,
+    "rating": "R",
+    "actors": [],
+    "released": 2003,
+    "description": "A machine from a post-apocalyptic future travels back in time to protect a man and a woman from an advanced robotic assassin to ensure they both survive a nuclear attack.",
+    "url": "../../assets/movie.jpg",
+    "reviews": []
+  }
+]

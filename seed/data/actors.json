@@ -1,1 +1,62 @@
-[{}]
+[
+  {
+    "name": "Actor Name1",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name2",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name3",
+    "stillAlive": false,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name4",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name5",
+    "stillAlive": false,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name6",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name7",
+    "stillAlive": false,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name8",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name9",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name10",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name11",
+    "stillAlive": false,
+    "url": "../../assets/actor.jpg"
+  },
+  {
+    "name": "Actor Name12",
+    "stillAlive": true,
+    "url": "../../assets/actor.jpg"
+  }
+]
