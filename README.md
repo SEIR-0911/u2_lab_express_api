@@ -46,10 +46,13 @@ module.exports = db;
 ```
 
 6) Create 3 schemas, Movies, Reviews and Actors.
-```
-mkdir models seed
+```sh
+mkdir models
 touch models/actor.js models/movie.js models/review.js
-touch seed/actors.js seed/movies.js seed/reviews.js
+mkdir seed
+mkdir seed/data
+touch seed/data/actors.json seed/data/movies.json seed/data/reviews.json
+touch seed/seedmoviesDatabase.js
 ```
 models ==> we store the Schemas
 seed ==> we seed the data in the db
@@ -209,20 +212,20 @@ app.get('/', (request, response) => {
 mkdir controllers
 ```
 
-Inside the controllers folder create a file called `CatController.js`.
+Inside the controllers folder create a file called `MovieController.js`.
 
 ```sh:
-touch controllers/CatController.js
+touch controllers/MovieController.js
 ```
 
-Inside of `CatController.js` we'll be creating functions that handle different HTTP requests.
+Inside of `MovieController.js` we'll be creating functions that handle different HTTP requests.
 
-Create a function called `getCats`, this function will accept a `request` and `response` as arguments/parameters.
+Create a function called `getMovie`, this function will accept a `request` and `response` as arguments/parameters.
 
 Send a `response` with the following:
 
 ```js
-const getCats = (request, response) => {
+const getMovie = (request, response) => {
   response.send({
     message: 'Getting Cats'
   })
@@ -242,7 +245,7 @@ module.exports = {
 Now that we've created a controller, it's time to put it to use. Back in your `app.js`, create a `GET` route with an endpoint of `/cats`.
 
 ```js
-app.get('/cats')
+app.get('/movies')
 ```
 
 Let's use our `getCats` function in our `CatController.js` file.
