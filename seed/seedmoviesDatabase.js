@@ -1,14 +1,12 @@
 const db = require('../db');
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
 const Chance = require('chance');
-const chance = new Chance();
-
 const { Actor, Review, Movie } = require('../models');
 const actors = require("./data/actors.json");
 const reviews = require("./data/reviews.json");
 const movies = require("./data/movies.json");
 
+const chance = new Chance();
 let actorsList;
 let reviewsList;
 
@@ -47,7 +45,7 @@ const createMovie = async () => {
             released: movie.released,
             description: movie.description,
             url: movie.url,
-            reviews: chance.pickset(reviewsList, chance.integer({ min: 0, max: 3 })).map(e => e._id),
+            reviews: chance.pickset(reviewsList, chance.integer({ min: 2, max: 3 })).map(e => e._id),
         });
     });
     let createMovies = await Movie.insertMany(moviesList);
