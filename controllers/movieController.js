@@ -1,16 +1,17 @@
-const { Movie, Actor,Review } = require('../models');
+const { Movie, Actor, Review } = require('../models');
 module.exports = {
     getAllMovies,
     getOneMovie,
     getAllActors,
     getOneActor,
     getAllReviews,
-    getOneReview
+    getOneReview,
+    createActor
 
-    
+
 };
 
-//movies
+//GET-movies
 async function getAllMovies(req, res) {
     console.log("Displaying all movies...");
     try {
@@ -34,7 +35,7 @@ async function getOneMovie(req, res) {
     }
 }
 
-//actors
+//GET-actors
 async function getAllActors(req, res) {
     console.log("Displaying all actors...");
     try {
@@ -58,7 +59,7 @@ async function getOneActor(req, res) {
     }
 }
 
-//Reviews
+//GET-Reviews
 async function getAllReviews(req, res) {
     console.log("Displaying all Reviews...");
     try {
@@ -76,6 +77,19 @@ async function getOneReview(req, res) {
         const id = req.params.id;
         const review = await Review.findById(id);
         return review ? res.json(review) : res.status(404).send(`Review with spesific ID does not exist!`);
+    } catch (error) {
+
+        return res.status(500).send(error.message);
+    }
+}
+
+//post - actor
+async function createActor(req, res) {
+    try {
+        console.log(req.body);
+        const actor = await Actor.create(req.body);
+
+        return res.status(201).json({ actor });
     } catch (error) {
 
         return res.status(500).send(error.message);

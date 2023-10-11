@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>Movie Database</title>
+  </head>
+
+  <body>
+    <h1>Movie Database</h1>
+    <form name="create-actor-form">
+      <h3>Create Actor</h3>
+      <lable>name:</lable>
+      <input name="name" type="text" placeholder="Acotr's Name" id="actor-name" /><br />
+
+      <lable>stillAlive</lable>
+      <select name="stillAlive" id="stillAlive">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <br />
+      <lablel>url</lablel>
+      <input name="url" type="text" placeholder="Acotr's Picture" id="actor-pic" />
+      <button type="submit" id="create-actor">Create</button>
+    </form>
+
+    <div id="movie-content"></div>
+  </body>
+</html>
