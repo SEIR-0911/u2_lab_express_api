@@ -1,0 +1,97 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   font-family: 'Bruno Ace SC', cursive;
+   
+}
+
+
+
+body {
+   background-color: #970000;
+
+}
+
+
+
+#container {
+   text-align: center;
+   margin: 2rem;
+   font-size: 1.5rem;
+
+}
+
+#all {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#actor {
+   margin: 5rem;
+}
+
+#actorText {
+   line-height: 1.5rem;
+   border: 3px solid #000;
+   border-radius: 5px;
+   font-size: 1.1rem;
+}
+
+#actorBtn {
+   line-height: 1.5rem;
+   background-color: crimson;
+   color: #333;
+   font-size: 1.1rem;
+   margin: 15px 5px;
+   opacity: .6;
+   transition: 0.3s;
+   display: inline-block;
+   text-decoration: none;
+   cursor: pointer;
+   border: 3px solid #000;
+   border-radius: 5px;
+}
+
+#actorBtn:hover {
+   opacity: 1;
+}
+
+img {
+   width: 200px;
+   height: auto;
+}
+
+#movie {
+
+}
+
+#movieText {
+   line-height: 1.5rem;
+   border: 3px solid #000;
+   border-radius: 5px;
+   font-size: 1.1rem;
+}
+
+#movieBtn {
+   line-height: 1.5rem;
+   background-color: crimson;
+   color: #333;
+   font-size: 1.1rem;
+   margin: 15px 5px;
+   opacity: .6;
+   transition: 0.3s;
+   display: inline-block;
+   text-decoration: none;
+   cursor: pointer;
+   border: 3px solid #000;
+   border-radius: 5px;
+}
+
+#movieBtn:hover {
+   opacity: 1;
+}
+
+li {
+   flex-wrap: wrap;
+}

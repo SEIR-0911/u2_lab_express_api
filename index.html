@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Movie Database</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>My Movie Database</h1>
+      </header>
+    </div>
+    <div id="all">
+      <div id="actor">
+        <div>
+          <img id="actorImage" src="" alt="Actor Pic" />
+        </div>
+        <div id="actorInput">
+          <input id="actorText" type="text" placeholder="Actor Name" />
+          <button id="actorBtn">Get Actor</button>
+        </div>
+        <div>
+          <ul id="actorInfo"></ul>
+        </div>
+      </div>
+      <div id="movie">
+        <div>
+          <img id="imageDiv" src="" alt="Movie Pic" />
+        </div>
+        <div id="movieInput">
+          <input id="movieText" type="text" placeholder="Movie Name" />
+          <button id="movieBtn">Get Movie</button>
+        </div>
+        <div>
+          <ul id="movieInfo"></ul>
+        </div>
+      </div>
+
+      <div class="container">
+         <h3>Add an actor you like!</h3>
+         <form action="/" method="post">
+            <div class="form-group">
+               <label for="name">Actor's name</label>
+               <input type="text" class="formCntrl" id="name" placeholder="Actor's full name" name="name">
+            </div>
+            <div class="form-group">
+               <label for="age">Actor's age</label>
+               <input type="text" class="formCntrl" id="age" placeholder="Actor's age" name="age">
+            </div>
+            <div class="form-group">
+               <label for="movieGenre">Movie genre</label>
+               <input type="text" class="formCntrl" id="movieGenre" placeholder="Movie Genre" name="movieGenre">
+            </div>
+            
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+      </div>
+      
+    </div>
+
+  </body>
+</html>
